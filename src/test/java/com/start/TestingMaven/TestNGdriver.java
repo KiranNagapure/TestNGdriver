@@ -1,6 +1,7 @@
 package com.start.TestingMaven;
 
 import java.sql.Driver;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,6 +37,8 @@ public class TestNGdriver {
 			  }
 	driver.get("https://www.facebook.com/");
 	driver.manage().window().maximize();
+	
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
 	
   }
